@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px auto;
+}
+
+#title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2a4365;
+}
+
+#description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #4a5568;
+}
+
+.counties {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 14px;
+  max-width: 200px;
+}
+
+#legend {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.legend-label {
+  font-size: 12px;
+  fill: #4a5568;
+}
+
+#map-container {
+  display: flex;
+  justify-content: center;
+}
+
+.county:hover {
+  stroke: #000;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.source {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #718096;
+}
+
+.source a {
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.source a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  #title {
+    font-size: 22px;
+  }
+  
+  #description {
+    font-size: 14px;
+  }
+}
